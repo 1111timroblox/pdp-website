@@ -4,20 +4,16 @@
   <meta charset="utf-8">
   <title>Prominence District Police | State of Firestone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official portal of the Prominence District Police, State of Firestone (Roblox). Recruitment, policies, patrol zones, command staff, live media.">
+  <meta name="description" content="Official portal of the Prominence District Police, State of Firestone (Roblox)">
   <link rel="icon" href="Emblem.png">
   <link rel="manifest" href="manifest.json">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --navy:#0B1F3B; --gold:#FFD700; --white:#FFFFFF; --red:#C8102E; --gray:#f4f4f4;
-      --bg:var(--gray); --txt:#222; --card:var(--white);
-    }
-    [data-theme="dark"]{--bg:#121212; --txt:#eee; --card:#1e1e1e;}
+    :root{--navy:#0B1F3B;--gold:#FFD700;--white:#FFFFFF;--red:#C8102E;--gray:#f4f4f4;}
     *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;transition:background .3s,color .3s;}
+    body{font-family:'Roboto',sans-serif;background:var(--gray);color:#222;line-height:1.6;}
     img{max-width:100%;}
-    a{color:inherit;}
+    a{color:inherit;text-decoration:none;}
     header{background:var(--navy);position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,.25);}
     .head-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;}
     .logo{display:flex;align-items:center;gap:.75rem;color:var(--white);font-family:'Bebas Neue',cursive;font-size:1.6rem;letter-spacing:1px;}
@@ -38,14 +34,10 @@
     .btn{background:var(--gold);color:var(--navy);padding:.85rem 1.8rem;border-radius:4px;font-weight:700;display:inline-block;transition:background .2s;}
     .btn:hover{background:#e6c200;}
     .grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
-    .card{background:var(--card);border-top:5px solid var(--gold);padding:1.5rem 1.2rem;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.08);}
+    .card{background:var(--white);border-top:5px solid var(--gold);padding:1.5rem 1.2rem;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.08);}
     .rank-table{width:100%;border-collapse:collapse;margin-top:1rem;}
     .rank-table th,.rank-table td{padding:.75rem;border:1px solid #ccc;text-align:left;}
     .rank-table th{background:var(--navy);color:var(--white);}
-    .trello-board{width:100%;height:600px;border:0;border-radius:8px;}
-    .zone-map{width:100%;height:auto;border:2px solid var(--navy);}
-    .media-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
-    .avatar{width:100px;border-radius:50%;border:3px solid var(--gold);}
     footer{background:var(--navy);color:var(--white);text-align:center;padding:2rem 1rem 1rem;margin-top:4rem;}
     footer img{height:90px;margin-bottom:.5rem;}
     .footer-links{display:flex;gap:1.2rem;justify-content:center;margin:1rem 0;flex-wrap:wrap;font-size:.9rem;}
@@ -69,12 +61,9 @@
       <nav>
         <ul id="nav-ul">
           <li><a href="#" onclick="show('home')">Home</a></li>
-          <li><a href="#" onclick="show('recruit')">Recruitment</a></li>
           <li><a href="#" onclick="show('ranks')">Ranks</a></li>
           <li><a href="#" onclick="show('zones')">Patrol Zones</a></li>
           <li><a href="#" onclick="show('handbook')">Handbook</a></li>
-          <li><a href="#" onclick="show('media')">Media</a></li>
-          <li><a href="#" onclick="show('cmd')">Command</a></li>
           <li><a href="#" onclick="show('contact')">Contact</a></li>
         </ul>
       </nav>
@@ -88,53 +77,14 @@
         <div class="hero-content">
           <h1 id="rotate-headline">NO SPEEDING IN OUR DISTRICT</h1>
           <p>Professional patrol. Community trust. State of Firestone pride.</p>
-          <a class="btn" href="#" onclick="show('recruit')">Start Your Career</a>
+          <a class="btn" href="#" onclick="show('ranks')">Explore Ranks</a>
         </div>
       </div>
       <div class="grid container" style="max-width:1200px;margin:-50px auto 0;padding:0 1rem;position:relative;z-index:3;">
-        <div class="card"><i class="fas fa-user-plus" style="font-size:2rem;color:var(--navy);margin-bottom:.5rem;"></i><h3>Join PDP</h3><p>Application centre, exam schedule, and academy info.</p></div>
+        <div class="card"><i class="fas fa-user-plus" style="font-size:2rem;color:var(--navy);margin-bottom:.5rem;"></i><h3>Join PDP</h3><p>Application centre, exam schedule, academy info.</p></div>
         <div class="card"><i class="fas fa-book" style="font-size:2rem;color:var(--navy);margin-bottom:.5rem;"></i><h3>Laws & Codes</h3><p>Quick-reference penal code, 10-codes, traffic guide.</p></div>
         <div class="card"><i class="fas fa-map-marked-alt" style="font-size:2rem;color:var(--navy);margin-bottom:.5rem;"></i><h3>Patrol Zones</h3><p>Interactive map of Prominence, hotspots, speed traps.</p></div>
         <div class="card"><i class="fas fa-users-cog" style="font-size:2rem;color:var(--navy);margin-bottom:.5rem;"></i><h3>Command Staff</h3><p>Meet the High Command team and unit supervisors.</p></div>
-      </div>
-      <div class="card container" style="max-width:1200px;margin:2rem auto;">
-        <h3 style="font-family:'Bebas Neue',cursive;font-size:1.8rem;margin-bottom:.5rem;">Live Trello – What's Happening</h3>
-        <iframe class="trello-board" src="https://trello.com/b/HVCn7MBL.html" title="PDP Control Board"></iframe>
-      </div>
-    </section>
-
-    <!-- RECRUITMENT -->
-    <section id="recruit">
-      <div class="container" style="max-width:900px;margin:auto;padding:2rem 1rem;">
-        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Recruitment & Exams</h2>
-        <h4>1. Requirements</h4>
-        <ul>
-          <li>13+ years old with a working microphone</li>
-          <li>Minimum 5 hours playtime in Stapleton County</li>
-          <li>Clean or near-clean moderation history across Firestone groups</li>
-          <li>Able to attend a 30-45 minute academy session</li>
-        </ul>
-        <h4>2. Application Steps</h4>
-        <ol>
-          <li>Click “Apply on Roblox” below → join the group.</li>
-          <li>Complete the Google Forms application (link in group shout).</li>
-          <li>Wait for a written exam invitation (DM via Roblox).</li>
-          <li>Pass academy (obstacle course + scenario quiz).</li>
-          <li>Receive rank “Officer” and patrol permit.</li>
-        </ol>
-        <div style="margin-top:1.5rem;">
-          <a class="btn" href="https://www.roblox.com/groups/4431799/Prominence-District-Police#!/about" target="_blank">Apply on Roblox</a>
-          <a class="btn" href="https://discord.gg/pdp" target="_blank" style="margin-left:.5rem;">Discord Help</a>
-        </div>
-        <h4>3. Academy Calendar</h4>
-        <table class="rank-table">
-          <thead><tr><th>Day</th><th>Time (EST)</th><th>Instructor</th></tr></thead>
-          <tbody>
-            <tr><td>Friday</td><td>7 PM</td><td>Sgt. Devvitt</td></tr>
-            <tr><td>Saturday</td><td>3 PM</td><td>Ofc. Minty</td></tr>
-            <tr><td>Sunday</td><td>5 PM</td><td>Capt. Build3r</td></tr>
-          </tbody>
-        </table>
       </div>
     </section>
 
@@ -197,128 +147,49 @@
         <ul>
           <li>Always wear uniform shirt & badge while on-duty.</li>
           <li>Do not abuse sirens (limit 5 seconds at traffic light).</li>
-          <li>Respect FRP (Fail-Role-Play) reports – provide body-cam (shadow-play) if requested.</li>
-          <li>Radio discipline – keep chit-chat to #off-duty channel in Discord.</li>
+          <li>Respect FRP reports – provide body-cam if requested.</li>
         </ul>
       </div>
     </section>
 
-    <!-- MEDIA -->
-    <section id="media">
-      <div class="container" style="max-width:1200px;margin:auto;padding:2rem 1rem;">
-        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Media & Patrol Logs</h2>
-        <div class="grid media-grid">
-          <div class="card">
-            <h4>Latest YouTube Patrol</h4>
-            <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PLPdpFS" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="card">
-            <h4>Twitter Feed</h4>
-            <a class="twitter-timeline" data-height="300" href="https://twitter.com/pdproblox?ref_src=twsrc%5Etfw">Tweets by pdproblox</a>
-            <script async src="https://platform.twitter.com/widgets.js"></script>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HIGH COMMAND -->
-    <section id="cmd">
-      <div class="container" style="max-width:1200px;margin:auto;padding:2rem 1rem;">
-        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">High Command</h2>
-        <p>Click a card to open Roblox profile.</p>
-        <div class="grid" id="cmd-grid">
-          <!-- JS injects live cards here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / REPORT -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container" style="max-width:800px;margin:auto;padding:2rem 1rem;">
         <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Contact Us</h2>
         <div class="grid">
-          <div class="card">
-            <h4>Emergency</h4>
-            <p>Dial 911 in-game or <strong>;911</strong> in radio.</p>
-          </div>
-          <div class="card">
-            <h4>Non-Emergency</h4>
-            <p>Roblox group wall<br>Discord #citizen-reports</p>
-          </div>
-          <div class="card">
-            <h4>Recruitment Questions</h4>
-            <p>Discord: <code>RecruitBOT#1234</code><br>Or message a Corporal+ in-game.</p>
-          </div>
-        </div>
-        <h4 style="margin-top:2rem;">Anonymous Tip Form (Google)</h4>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVznRqVJ8cBqPpOHL8VJ5L7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ7VqZ arrest.</li>
-          <li>Clear scene, log call in CAD.</li>
-        </ol>
-        <h4>USE-OF-FORCE CONTINUUM</h4>
-        <p>Officer Presence → Verbal → Soft Control → Hard Control → Intermediate Weapons → Deadly Force (only when imminent threat of death/serious injury).</p>
-        <h4>DISCORD & RADIO ETIQUETTE</h4>
-        <ul>
-          <li>Keep voice channels clear during pursuits.</li>
-          <li>Use push-to-talk; no background music.</li>
-          <li>Follow chain-of-command for complaints.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- COMMAND STAFF -->
-    <section id="staff">
-      <div class="container" style="max-width:1100px;margin:auto;padding:2rem 1rem;">
-        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Command Staff Roster</h2>
-        <p style="margin-bottom:1rem;">Updated live from Trello – last sync <span id="sync-time"></span></p>
-        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem;">
-          <!-- High Command -->
-          <div class="card"><img src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="Chief"><h4>Chief_Awesome10</h4><p>Chief of Police</p><small>Appointed 2023-11</small></div>
-          <div class="card"><img src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="DC"><h4>DeputyCool24</h4><p>Deputy Chief</p><small>Appointed 2024-02</small></div>
-          <div class="card"><img src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="Captain"><h4>CaptainBuild3r</h4><p>Captain – Operations</p><small>Promoted 2024-01</small></div>
-          <div class="card"><img src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="LT"><h4>LTPatrol121</h4><p>Lieutenant – Patrol</p><small>Promoted 2023-12</small></div>
-          <!-- Unit Supervisors -->
-          <div class="card"><img src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="Sgt"><h4>SgtDevvitt</h4><p>Sergeant – Training Unit</p></div>
-          <div class="card"><img src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=150&height=150&format=png" alt="Sgt"><h4>SgtMinty</h4><p>Sergeant – Traffic Division</p></div>
+          <div class="card"><h4>Emergency</h4><p>Dial 911 in-game or <strong>;911</strong> in radio.</p></div>
+          <div class="card"><h4>Non-Emergency</h4><p>Roblox group wall<br>Discord #citizen-reports</p></div>
+          <div class="card"><h4>Recruitment Questions</h4><p>Discord: <code>RecruitBOT#1234</code><br>Message a Corporal+ in-game.</p></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <img src="Emblem.png" alt="PDP Seal">
-    <div class="footer-links">
-      <a href="https://www.roblox.com/groups/4431799/Prominence-District-Police#!/about" target="_blank">Roblox Group</a>
-      <a href="https://discord.gg/pdp" target="_blank">Discord</a>
-      <a href="https://twitter.com/pdproblox" target="_blank">Twitter</a>
-      <a href="https://trello.com/b/HVCn7MBL" target="_blank">Trello Board</a>
-      <a href="#" onclick="show('handbook')">Handbook</a>
-    </div>
-    <small>&copy; <span id="yr"></span> Prominence District Police (State of Firestone) | Not affiliated with real-world law-enforcement</small>
-  </footer>
-
+  <!-- ==========  MANDATORY  ROUTER  ========== -->
   <script>
-    // Router
+    console.log('[PDP] Router loaded');          // visual confirmation in F12
     function show(id){
       document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+      const target = document.getElementById(id);
+      if(!target){ console.warn('[PDP] No section with id',id); return;}
+      target.classList.add('active');
       window.scrollTo({top:0,behavior:'smooth'});
-      if(window.innerWidth<=768) toggleNav('close');
+      if(window.innerWidth <= 768) toggleNav('close');
     }
-    // Mobile nav
     function toggleNav(action){
-      const ul=document.getElementById('nav-ul');
-      if(action==='close') ul.classList.remove('open');
+      const ul = document.getElementById('nav-ul');
+      if(!ul) return;
+      if(action === 'close') ul.classList.remove('open');
       else ul.classList.toggle('open');
     }
-    // Year & sync time
-    document.getElementById('yr').textContent=new Date().getFullYear();
-    document.getElementById('sync-time').textContent=new Date().toLocaleString();
-    // Headline rotator
-    const headlines=["NO SPEEDING IN OUR DISTRICT","PROTECTING PROMINENCE TOGETHER","YOUR SAFETY IS OUR MISSION"];
-    let idx=0;
+    // footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // headline rotator
+    const headlines = ["NO SPEEDING IN OUR DISTRICT","PROTECTING PROMINENCE TOGETHER","YOUR SAFETY IS OUR MISSION"];
+    let idx = 0;
     setInterval(()=>{
-      idx=(idx+1)%headlines.length;
-      document.getElementById('rotate-headline').textContent=headlines[idx];
+      idx = (idx + 1) % headlines.length;
+      document.getElementById('rotate-headline').textContent = headlines[idx];
     },4000);
   </script>
 </body>
