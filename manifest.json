@@ -1,0 +1,12 @@
+{
+  "name": "Prominence District Police – State of Firestone",
+  "short_name": "PDP",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1F3B",
+  "theme_color": "#FFD700",
+  "icons": [
+    { "src": "Emblem.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
