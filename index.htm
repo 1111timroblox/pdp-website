@@ -9,7 +9,7 @@
   <link rel="manifest" href="manifest.json">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#0B1F3B;--gold:#FFD700;--white:#FFFFFF;--red:#C8102E;--gray:#f4f4f4f;}
+    :root{--navy:#0B1F3B;--gold:#FFD700;--white:#FFFFFF;--red:#C8102E;--gray:#f4f4f4;}
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Roboto',sans-serif;background:var(--gray);color:#222;line-height:1.6;}
     img{max-width:100%;}
@@ -56,14 +56,13 @@
   <header>
     <div class="head-inner">
       <a class="logo" href="#" onclick="show('home')">
-        <img src="blem.png" alt="PDP Emblem">
+        <img src="Emblem.png" alt="PDP Emblem">
         <span>Prominence District Police</span>
       </a>
       <span id="menu-toggle" onclick="toggleNav()">&#9776;</span>
       <nav>
         <ul id="nav-ul">
           <li><a href="#" onclick="show('home')">Home</a></li>
-          <li><a href="#" onclick="show('recruit')">Recruitment</a></li>
           <li><a href="#" onclick="show('ranks')">Ranks</a></li>
           <li><a href="#" onclick="show('zones')">Patrol Zones</a></li>
           <li><a href="#" onclick="show('handbook')">Handbook</a></li>
@@ -81,7 +80,7 @@
         <div class="hero-content">
           <h1 id="rotate-headline">NO SPEEDING IN OUR DISTRICT</h1>
           <p>Professional patrol. Community trust. State of Firestone pride.</p>
-          <a class="btn" href="#" onclick="show('recruit')">Start Your Career</a>
+          <a class="btn" href="#" onclick="show('ranks')">Explore Ranks</a>
         </div>
       </div>
       <div class="grid container" style="max-width:1200px;margin:-50px auto 0;padding:0 1rem;position:relative;z-index:3;">
@@ -92,11 +91,123 @@
       </div>
     </section>
 
-    <!-- RECRANKS -->
+    <!-- RANKS -->
     <section id="ranks">
       <div class="container" style="max-width:1000px;margin:auto;padding:2rem 1rem;">
         <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Rank & Promotion Guide</h2>
         <table class="rank-table">
           <thead><tr><th>Insignia</th><th>Rank</th><th>Duties</th><th>Promotion Requirement</th></tr></thead>
           <tbody>
-            <tr><td>🟫
+            <tr><td>🟫</td><td>Officer</td><td>Patrol, traffic, reports</td><td>Entry level</td></tr>
+            <tr><td>🟨</td><td>Corporal</td><td>FTO, senior patrol</td><td>30 days + 60 tickets + exam</td></tr>
+            <tr><td>🟧</td><td>Sergeant</td><td>Shift supervisor</td><td>60 days + leadership course</td></tr>
+            <tr><td>🟥</td><td>Lieutenant</td><td>Platoon leader</td><td>HQ selection board</td></tr>
+            <tr><td>🔴</td><td>Captain</td><td>Bureau command</td><td>Appointed by Chief</td></tr>
+            <tr><td>⚫</td><td>Deputy Chief</td><td>Department operations</td><td>Appointed by Chief</td></tr>
+            <tr><td>🟡</td><td>Chief</td><td>Overall leadership</td><td>Appointed by Governor</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PATROL ZONES -->
+    <section id="zones">
+      <div class="container" style="max-width:1100px;margin:auto;padding:2rem 1rem;">
+        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Patrol Zones & Hotspots</h2>
+        <img src="ZONE ONE.png" alt="Prominence map" class="zone-map">
+        <div class="grid" style="margin-top:1.5rem;">
+          <div class="card"><h4>Zone 1 – Primary Zone</h4><p>The top priority of the department. Officers presence in this zone is expected to be the highest.</p></div>
+          <div class="card"><h4>Zone 2 – Secondary Zone</h4><p>The second highest priority. Officers may “Semi”-Regularly patrol and pass through this zone alongside staging in the zone.</p></div>
+          <div class="card"><h4>Zone 3 – Tertiary Zone</h4><p>The lowest priority. Officers may occasionally patrol through this zone, however no Officer shall station/stage themselves in Zone 3 for an unnecessary amount of time.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HANDBOOK -->
+    <section id="handbook">
+      <div class="container" style="max-width:900px;margin:auto;padding:2rem 1rem;">
+        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Policy Handbook</h2>
+        <button onclick="window.print()" style="float:right;margin-bottom:1rem;">🖨 Print</button>
+        <h4>10-CODE QUICK CARD</h4>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));font-size:.95rem;">
+          <div class="card">10-4 Acknowledge</div><div class="card">10-8 In Service</div><div class="card">10-15 Subject in Custody</div>
+          <div class="card">10-20 Location</div><div class="card">10-23 Arrived on Scene</div><div class="card">10-42 End Tour</div>
+        </div>
+        <h4>TRAFFIC STOP – 7 STEP</h4>
+        <ol style="margin-left:1.2rem;">
+          <li>Select safe location, signal driver to curb.</li>
+          <li>Run plate & warrant check before exit.</li>
+          <li>Approach left-rear, greet & identify.</li>
+          <li>State reason for stop.</li>
+          <li>Request docs (license, registration).</li>
+          <li>Use discretion: cite, warn, or arrest.</li>
+          <li>Clear scene, log in CAD.</li>
+        </ol>
+        <h4>USE-OF-FORCE CONTINUUM</h4>
+        <p>Officer Presence → Verbal → Soft Control → Hard Control → Intermediate Weapons → Deadly Force</p>
+        <h4>ROBLOX-SPECIFIC RULES</h4>
+        <ul>
+          <li>Always wear uniform shirt & badge while on-duty.</li>
+          <li>Do not abuse sirens (limit 5 seconds at traffic light).</li>
+          <li>Respect FRP reports – provide body-cam if requested.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMAND STAFF -->
+    <section id="cmd">
+      <div class="container" style="max-width:1200px;margin:auto;padding:2rem 1rem;">
+        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">High Command</h2>
+        <p style="margin-bottom:1rem;">Updated from Trello – last sync <span id="sync-time"></span></p>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem;">
+          <div class="card"><img src="IntImage.png" alt="Chief" class="avatar"><h4>Chief of Police</h4><p>Int_ers</p><small>Appointed 2023-11</small></div>
+          <div class="card"><img src="Timimage.png" alt="Assistant Chief" class="avatar"><h4>Assistant Chief of Police</h4><p>1111tim</p><small>Appointed 2024-02</small></div>
+          <div class="card"><img src="Thunderimage.png" alt="DIB Lieutenant" class="avatar"><h4>Departmental Integrity Bureau Lieutenant</h4><p>Thunderinq</p><small>Promoted 2024-01</small></div>
+          <div class="card"><img src="jackiphobeimage.png" alt="Field Ops Lieutenant" class="avatar"><h4>Field Operations Lieutenant</h4><p>jackiphobe</p><small>Promoted 2023-12</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container" style="max-width:800px;margin:auto;padding:2rem 1rem;">
+        <h2 style="font-family:'Bebas Neue',cursive;font-size:2.5rem;">Contact Us</h2>
+        <div class="grid">
+          <div class="card"><h4>Emergency</h4><p>Dial 911 in-game or <strong>;911</strong> in radio.</p></div>
+          <div class="card"><h4>Non-Emergency</h4><p>Roblox group wall<br>Discord #citizen-reports</p></div>
+          <div class="card"><h4>Recruitment Questions</h4><p>Discord: <code>RecruitBOT#1234</code><br>Message a Corporal+ in-game.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========  MANDATORY  ROUTER  ========== -->
+  <script>
+    console.log('[PDP] Router loaded');          // visual confirmation in F12
+    function show(id){
+      document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+      const target = document.getElementById(id);
+      if(!target){ console.warn('[PDP] No section with id',id); return;}
+      target.classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+      if(window.innerWidth <= 768) toggleNav('close');
+    }
+    function toggleNav(action){
+      const ul = document.getElementById('nav-ul');
+      if(!ul) return;
+      if(action === 'close') ul.classList.remove('open');
+      else ul.classList.toggle('open');
+    }
+    // footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    document.getElementById('sync-time').textContent = new Date().toLocaleString();
+    // headline rotator
+    const headlines = ["NO SPEEDING IN OUR DISTRICT","PROTECTING PROMINENCE TOGETHER","YOUR SAFETY IS OUR MISSION"];
+    let idx = 0;
+    setInterval(()=>{
+      idx = (idx + 1) % headlines.length;
+      document.getElementById('rotate-headline').textContent = headlines[idx];
+    },4000);
+  </script>
+</body>
+</html>
